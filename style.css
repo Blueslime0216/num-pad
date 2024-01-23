@@ -1,0 +1,56 @@
+*{
+    outline: none;
+}
+body {
+    background-color: hsl(0, 0%, 10%);
+}
+
+#pad {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    width: 35vw;
+    border: 2px hsl(0, 0%, 15%) solid;
+    border-radius: 1em;
+    overflow: hidden;
+}
+td {
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#num {
+    padding: 1em;
+    color: hsl(0, 0%, 40%);
+    font-size: 3em;
+    text-align: center;
+    white-space: nowrap;
+}
+.pass {
+    color: hsl(0, 0%, 100%);
+}
+
+button {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.5em;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    transition: background-color 0.1s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(0, 0%, 25%);
+}
+button:active {
+    background-color: hsl(0, 0%, 40%);
+}
+.active {
+    background-color: hsl(0, 0%, 40%);
+}

@@ -31,11 +31,25 @@ function test(inputNumber){
         set[nowStep + 1] = temp;
         
         num.innerHTML = set.join('');
+        // inputEffect();
         if(nowStep == 6){
+            new Audio('res/clear.wav').play();
+            document.body.style.backgroundColor = 'hsl(0, 0%, 10%)';
             // 0.5초 후 리셋
-            setTimeout(reset, 500);
+            setTimeout(function() {
+                document.body.style.backgroundColor = 'hsl(0, 0%, 5%)';
+                reset();
+            }, 100);
+            // 흔들림 효과
+            document.getElementById('clear').classList.add('clear');
+            setTimeout(function() {
+                document.getElementById('clear').classList.remove('clear');
+            }, 1000);
         } else {
+            new Audio('res/keydown.wav').play();
             nowStep++;
         }
+    } else {
+        new Audio('res/keydown_wrong.wav').play();
     }
 }
